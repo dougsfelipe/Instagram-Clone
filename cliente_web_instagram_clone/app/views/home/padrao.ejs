@@ -27,7 +27,7 @@
 					if (xhr.status === 200) {
 						var data = $.parseJSON(xhr.responseText);
 
-						for (i = 0; i < data.length; i++) {
+						for (i = data.length -1; i >= 0; i--) {
 
 							$('#container_timeline').append(
 								'<div class="publicacao">' +
@@ -46,7 +46,7 @@
 							if (data[i].comentarios != undefined) {
 								var comentarios = data[i].comentarios;
 
-								for (j = 0; j < comentarios.length; j++) {
+								for (j = comentarios.length -1; j >= 0; j--) {
 									$('#comentarios_' + data[i]._id).append(
 										'<div class="txt_comentario">' +
 											'<button type="button" value="'+comentarios[j].id_comentario + '" class = "btn-default btn_remover_postagem" >X</button>' +

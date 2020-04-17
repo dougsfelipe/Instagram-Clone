@@ -10,7 +10,8 @@
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 
 	<!-- bootstrap - link cdn -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- incluindo css -->
 	<link href="css/style.css" rel="stylesheet">
@@ -27,14 +28,14 @@
 					if (xhr.status === 200) {
 						var data = $.parseJSON(xhr.responseText);
 
-						for (i = data.length -1; i >= 0; i--) {
+						for (i = data.length - 1; i >= 0; i--) {
 
 							$('#container_timeline').append(
 								'<div class="publicacao">' +
 								'<span class="titulo">' +
 								data[i].titulo +
 								'</span>' +
-								'<img style = "width: 300px;" src="http://localhost:8080/uploads/' + data[i].url_imagem + '" />' +
+								'<img style = "width: 100%;" src="http://localhost:8080/uploads/' + data[i].url_imagem + '" />' +
 								'<div class="comentar" id="comentarios_' + data[i]._id + '">' +
 								'<input type="text" class="form-control input_comentario" id="postagem_' + data[i]._id + '" placeholder="Adicione um Comentário...">' +
 								'<button class="btn btn-default btn_postagem" value="' + data[i]._id + '" type="button">Comentar</button>' +
@@ -46,10 +47,10 @@
 							if (data[i].comentarios != undefined) {
 								var comentarios = data[i].comentarios;
 
-								for (j = comentarios.length -1; j >= 0; j--) {
+								for (j = comentarios.length - 1; j >= 0; j--) {
 									$('#comentarios_' + data[i]._id).append(
 										'<div class="txt_comentario">' +
-											'<button type="button" value="'+comentarios[j].id_comentario + '" class = "btn-default btn_remover_postagem" >X</button>' +
+										'<button type="button" value="' + comentarios[j].id_comentario + '" class = "btn-default btn_remover_postagem" >X</button>' +
 										comentarios[j].comentario +
 										'</div>'
 									);
@@ -58,9 +59,9 @@
 							}
 						}
 
-						$('.btn_remover_postagem').click(function(){
+						$('.btn_remover_postagem').click(function () {
 							var id_comentario = this.value;
-							
+
 							var xhr = new XMLHttpRequest;
 							xhr.open('DELETE', 'http://localhost:8080/api/' + id_comentario);
 
@@ -144,12 +145,21 @@
 
 	<nav class="navbar navbar-default">
 		<div class="container">
-			<div class="col-md-12">
-				<div class="container-fluid">
-					<img alt="Instagram Clone - Versão WEB" src="images/logo2.jpg" class="logo2">
-					<img alt="Incluir" src="images/incluir.jpg" class="pull-right btn-incluir" id="btn_incluir">
+			
+				<div class="col-md-8">
+					<div class="container-fluid">
+						<img alt="Instagram Clone - Versão WEB" src="images/logo2.jpg" class="logo2">
+					</div>
 				</div>
-			</div>
+				<div class="col-md-3 d-flex align-items-center justify-content-between">
+					<img src="images/home.svg" class=" imagem " id="">
+					<img src="images/send.svg" class=" imagem " id="">
+					<img src="images/compass.svg" class="imagem " id="">
+					<img src="images/heart.svg" class="imagem  " id="">
+					<img alt="Incluir" src="images/incluir.jpg" class="imagem btn-incluir " id="btn_incluir">
+				</div>
+
+			
 		</div>
 	</nav>
 

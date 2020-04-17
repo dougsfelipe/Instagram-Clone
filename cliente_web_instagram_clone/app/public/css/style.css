@@ -16,6 +16,11 @@ body{
 	font-weight: bold;
 }
 
+.imagem{
+	width: 30px;
+	
+}
+
 .painel-login{
 	padding-top: 60px;
 }
@@ -33,7 +38,7 @@ body{
 }
 
 .btn-incluir{
-	padding-top: 25px;
+	
 }
 
 #div_incluir{

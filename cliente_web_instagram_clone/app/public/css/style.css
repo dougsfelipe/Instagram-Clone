@@ -33,13 +33,59 @@ body{
 	background: #fff;
 }
 
-.logo2{
-	padding-left:50px;
+.form-control{
+	width: 30%;
+	margin-right: 40px;
+	background-color: #f5f4f2;
 }
 
-.btn-incluir{
-	
+.logo2{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 140px;
 }
+
+#menu{
+	border-bottom: 1px solid lightgray;
+}
+
+.textStories{
+	margin-top: 10x; 
+	font-size: 1.1em;
+	color: grey;
+	font-weight: 600;
+}
+
+.textVertudo{
+	margin-top: 10x; 
+	font-size: 1em;
+	color: black;
+	font-weight: 600;
+}
+
+
+p{
+	margin-top: 10px;
+}
+
+.menuHorizontal{
+	width: 100%;
+	height: 300px;
+	background-color: white;
+	margin-top: 30px;
+	border:1px solid lightgray ;
+	border-radius: 5px;
+}
+
+.sugestao{
+	width: 100%;
+	height: 200px;
+	background-color: white;
+	margin-top: 20px;
+	border:1px solid lightgray ;
+	border-radius: 5px;
+}
+
 
 #div_incluir{
 	width:70%;

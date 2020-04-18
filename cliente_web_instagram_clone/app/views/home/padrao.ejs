@@ -32,14 +32,30 @@
 
 							$('#container_timeline').append(
 								'<div class="publicacao">' +
-								'<span class="titulo">' +
+								'<img style = "width: 100%;" src="http://localhost:8080/uploads/' + data[i].url_imagem + '" />' +
+								
+								'<div class="likes row float-right ">'+
+								'<img src="images/home.svg" class=" imagens " id="">'+
+								'<img src="images/send.svg" class=" imagens" id="">'+
+								'<img src="images/compass.svg" class="imagens " id="">'+
+
+								'</div>'+
+								
+
+								'<span class="titulo"> <b>dougsfelipe</b> ' +
 								data[i].titulo +
 								'</span>' +
-								'<img style = "width: 100%;" src="http://localhost:8080/uploads/' + data[i].url_imagem + '" />' +
 								'<div class="comentar" id="comentarios_' + data[i]._id + '">' +
+
+									'</div>' +
+									'<hr class="style1">'+
+									'<div class="row">'+
 								'<input type="text" class="form-control input_comentario" id="postagem_' + data[i]._id + '" placeholder="Adicione um Comentário...">' +
 								'<button class="btn btn-default btn_postagem" value="' + data[i]._id + '" type="button">Comentar</button>' +
-								'</div>' +
+								'</div>'+
+
+								
+								
 
 								'</div>'
 							);
@@ -50,8 +66,13 @@
 								for (j = comentarios.length - 1; j >= 0; j--) {
 									$('#comentarios_' + data[i]._id).append(
 										'<div class="txt_comentario">' +
-										'<button type="button" value="' + comentarios[j].id_comentario + '" class = "btn-default btn_remover_postagem" >X</button>' +
-										comentarios[j].comentario +
+										'<div class="row justify-content-between">'+
+										'<span class="tituloComent"> <b>dougsfelipe</b> ' +
+											comentarios[j].comentario +
+										'</span>' +
+										'<button type="button" value="' + comentarios[j].id_comentario + '" class = "btn-default btn_remover_postagem" ><3</button>' +
+										'</div>' +
+										
 										'</div>'
 									);
 								}
@@ -149,7 +170,7 @@
 				<div class="col-md-9">
 					<div class="container-fluid">
 						<img alt="Instagram Clone - Versão WEB" src="images/logo2.png" class="logo2">
-						<input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
+						<input class="form-nav form-control" type="search" placeholder="Pesquisar" aria-label="Search">
 					</div>
 				</div>
 				<div class="col-md-3 d-flex align-items-center justify-content-between">
@@ -165,11 +186,12 @@
 	</nav>
 
 	<div class="container ">
+		<div class="row">
+			<div class="col-8" id="container_timeline"></div>
 		
-			<div class="col-md-8" id="container_timeline"></div>
 		
-		<div class="row justify-content-end">
-			<div class="col-md-4 menuHorizontal">
+			<div class="col-4">
+			<div class="col menuHorizontal">
 				<div class="row">
 					<div class="col">
 						<p class="text-left textStories">Stories</p>
@@ -178,12 +200,11 @@
 						<p class="text-right textVertudo">Ver Tudo</p>
 					</div>
 				</div>
-
 			</div>
 			<div class="w-100"></div>
-			<div class="col-md-4 sugestao"></div>
+			<div class="col sugestao"></div>
 		</div>
-		
+		</div>
 
 	</div>
 

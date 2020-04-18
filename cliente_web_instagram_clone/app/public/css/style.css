@@ -34,15 +34,17 @@ body{
 }
 
 .form-control{
-	width: 30%;
+	width: 80%;
 	margin-right: 40px;
-	background-color: #f5f4f2;
+	background-color: white;
+	border-top: 1px solid lightgray;
 }
 
 .logo2{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 140px;
+	margin-left: -30px;
 }
 
 #menu{
@@ -103,18 +105,30 @@ p{
 	border:solid 1px #EFEFEF;
 	margin-bottom:50px;
 	text-align: center;
+	margin-top: 30px;
+	border:1px solid lightgray ;
+	border-radius: 5px;
+	background-color: white;
 }
 
 .publicacao .titulo{
 	background-color: #FFF;
-	padding-left:30px;
-	padding-top:15px;
-	padding-bottom:15px;
+	padding-left:20px;
 	display:block;
-	font-weight: bold;
 	text-align: left;
 }
 
+.tituloComent{
+	background-color: #FFF;
+	margin-left: 10px;
+	display:block;
+	text-align: left;
+}
+
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
 .publicacao img{
 	border-top:solid 1px #EFEFEF;
 	border-bottom:solid 1px #EFEFEF;
@@ -122,12 +136,13 @@ p{
 
 .comentar{
 	text-align: left;
-	padding:20px;
+	padding:10px;
 	background:#FFF;
 }
 
 .input_comentario{
 	border: none;
+	border-radius: 0;
 	box-shadow: none;
 	margin-bottom:10px;
 }
@@ -149,3 +164,26 @@ p{
 	color: #c2c2c2;
 	border:none;
 }
+
+.likes{
+	width: 100%;
+	
+}
+
+.likes .imagens{
+	margin-left: 30px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	width: 30px;
+}
+
+.btn {
+   color: lightskyblue;
+}
+
+.form-nav{
+	width: 30%;
+	margin-right: 80px;
+}
+
+

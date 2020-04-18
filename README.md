@@ -2,7 +2,7 @@
 
 
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.PNG)
 
 Instagram clone made using NodeJS and Mongodb
 

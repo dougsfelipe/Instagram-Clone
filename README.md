@@ -2,7 +2,7 @@
 
 
 
-![Test Image 4]([https://github.com/dougsfelipe/Instagram-Clone/cliente_web_instagram_clone/app/public/images/print.png](https://github.com/dougsfelipe/Instagram-Clone/cliente_web_instagram_clone/app/public/images/print.png))
+![Screenshot](screenshot.png)
 
 Instagram clone made using NodeJS and Mongodb
 

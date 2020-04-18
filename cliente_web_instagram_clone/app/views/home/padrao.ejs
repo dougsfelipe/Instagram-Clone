@@ -32,30 +32,34 @@
 
 							$('#container_timeline').append(
 								'<div class="publicacao">' +
+								'<div class="row publicacaoTop">' +
+								'<img src="images/profile/profile1.jpg" alt="..." class="img-publicacao">' +
+								'<span class="titulo"> <b>claudialimas</b></span>' +
+								'</div>' +
 								'<img style = "width: 100%;" src="http://localhost:8080/uploads/' + data[i].url_imagem + '" />' +
-								
-								'<div class="likes row float-right ">'+
-								'<img src="images/home.svg" class=" imagens " id="">'+
-								'<img src="images/send.svg" class=" imagens" id="">'+
-								'<img src="images/compass.svg" class="imagens " id="">'+
 
-								'</div>'+
-								
+								'<div class="likes row float-right ">' +
+								'<img src="images/coracao.png" class=" imagens " id="">' +
+								'<img src="images/comentario.png" class=" imagens" id="">' +
+								'<img src="images/enviar.png" class="imagens " id="">' +
+
+								'</div>' +
+
 
 								'<span class="titulo"> <b>dougsfelipe</b> ' +
 								data[i].titulo +
 								'</span>' +
 								'<div class="comentar" id="comentarios_' + data[i]._id + '">' +
 
-									'</div>' +
-									'<hr class="style1">'+
-									'<div class="row">'+
+								'</div>' +
+								'<hr class="style1">' +
+								'<div class="row">' +
 								'<input type="text" class="form-control input_comentario" id="postagem_' + data[i]._id + '" placeholder="Adicione um Comentário...">' +
 								'<button class="btn btn-default btn_postagem" value="' + data[i]._id + '" type="button">Comentar</button>' +
-								'</div>'+
+								'</div>' +
 
-								
-								
+
+
 
 								'</div>'
 							);
@@ -66,13 +70,15 @@
 								for (j = comentarios.length - 1; j >= 0; j--) {
 									$('#comentarios_' + data[i]._id).append(
 										'<div class="txt_comentario">' +
-										'<div class="row justify-content-between">'+
-										'<span class="tituloComent"> <b>dougsfelipe</b> ' +
-											comentarios[j].comentario +
+										'<div class="row justify-content-between">' +
+										'<span class="tituloComent"> <b>matheushenique21</b> ' +
+										comentarios[j].comentario +
 										'</span>' +
-										'<button type="button" value="' + comentarios[j].id_comentario + '" class = "btn-default btn_remover_postagem" ><3</button>' +
+										'<button type="button" value="' + comentarios[j].id_comentario + '" class = "btn-default btn_remover_postagem" >'+ 
+											'<img src="images/coracao.png" class=" imagenComentario" id="">'
+											+ '</button>' +
 										'</div>' +
-										
+
 										'</div>'
 									);
 								}
@@ -164,46 +170,116 @@
 
 <body>
 
-	<nav class="navbar navbar-default"  id="menu">
+	<nav class="navbar navbar-default" id="menu">
 		<div class="container ">
-			
-				<div class="col-md-9">
-					<div class="container-fluid">
-						<img alt="Instagram Clone - Versão WEB" src="images/logo2.png" class="logo2">
-						<input class="form-nav form-control" type="search" placeholder="Pesquisar" aria-label="Search">
-					</div>
-				</div>
-				<div class="col-md-3 d-flex align-items-center justify-content-between">
-					<img src="images/home.svg" class=" imagem " id="">
-					<img src="images/send.svg" class=" imagem " id="">
-					<img src="images/compass.svg" class="imagem " id="">
-					<img src="images/heart.svg" class="imagem  " id="">
-					<img alt="Incluir" src="images/incluir.jpg" class="imagem btn-incluir " id="btn_incluir">
-				</div>
 
-			
+			<div class="col-md-9">
+				<div class="container-fluid">
+					<img alt="Instagram Clone - Versão WEB" src="images/logo2.png" class="logo2">
+					<input class="form-nav form-control" type="search" placeholder="Pesquisar" aria-label="Search">
+				</div>
+			</div>
+			<div class="col-md-3 d-flex align-items-center justify-content-between">
+				<img src="images/home.png" class=" imagem " id="">
+				<img src="images/notificacao.png" class=" imagem " id="">
+				<img src="images/bussula.png" class="imagem " id="">
+				<img src="images/coracao.png" class="imagem  " id="">
+				<img alt="Incluir" src="images/incluir.jpg" class="imagem btn-incluir " id="btn_incluir">
+			</div>
+
+
 		</div>
 	</nav>
 
 	<div class="container ">
-		<div class="row">
+		<div class="row position-fixe">
 			<div class="col-8" id="container_timeline"></div>
-		
-		
+
+
 			<div class="col-4">
-			<div class="col menuHorizontal">
-				<div class="row">
+				<div class="col menuHorizontal">
+					<div class="row">
+						<div class="col">
+							<p class="text-left textStories">Stories</p>
+						</div>
+						<div class="col">
+							<p class="text-right textVertudo">Ver Tudo</p>
+						</div>
+
+						<div class="row publicacaoStories">
+							<div class="col-3">
+								<img src="images/profile/profile1.jpg" alt="..." class="img-publicacao">
+							</div>
+							<div class="col-9 nomeStories">
+								<span class="tituloStories1"> <b>claudialimas</b></span><br>
+								<span class="tituloStories2"> <b>Há 5 minutos</b></span>
+							</div>
+						</div>
+
+						<div class="row publicacaoStories">
+							<div class="col-3">
+								<img src="images/profile/profile2.jpg" alt="..." class="img-publicacao">
+							</div>
+							<div class="col-9 nomeStories">
+								<span class="tituloStories1"> <b>dougsfelipe</b></span><br>
+								<span class="tituloStories2"> <b>Há 27 minutos</b></span>
+							</div>
+						</div>
+
+						<div class="row publicacaoStories">
+							<div class="col-3">
+								<img src="images/profile/profile3.jpg" alt="..." class="img-publicacao">
+							</div>
+							<div class="col-9 nomeStories">
+								<span class="tituloStories1"> <b>igortancredi</b></span><br>
+								<span class="tituloStories2"> <b>Há 1 hora</b></span>
+							</div>
+						</div>
+
+						<div class="row publicacaoStories">
+							<div class="col-3">
+								<img src="images/profile/profile4.jpg" alt="..." class="img-publicacao">
+							</div>
+							<div class="col-9 nomeStories">
+								<span class="tituloStories1"> <b>eltonvieira</b></span><br>
+								<span class="tituloStories2"> <b>Há 2 horas</b></span>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+				<div class="w-100"></div>
+				<div class="col sugestao">
+					<div class="row">
 					<div class="col">
-						<p class="text-left textStories">Stories</p>
+						<p class="text-left textStories">Sugestões</p>
 					</div>
 					<div class="col">
 						<p class="text-right textVertudo">Ver Tudo</p>
 					</div>
+
+					<div class="row publicacaoStories">
+						<div class="col-3">
+							<img src="images/profile/profile5.jpg" alt="..." class="img-publicacao">
+						</div>
+						<div class="col-9 nomeStories">
+							<span class="tituloStories1"> <b>sammyworlds</b></span><br>
+							<span class="tituloStories3"> <b>Novo no Instagram</b></span>
+						</div>
+					</div>
+					<div class="row publicacaoStories">
+						<div class="col-3">
+							<img src="images/profile/profile6.jpg" alt="..." class="img-publicacao">
+						</div>
+						<div class="col-9 nomeStories">
+							<span class="tituloStories1"> <b>jpgadelha</b></span><br>
+							<span class="tituloStories3"> <b>Seguido por robyn</b></span>
+						</div>
+					</div>
+				</div>
 				</div>
 			</div>
-			<div class="w-100"></div>
-			<div class="col sugestao"></div>
-		</div>
 		</div>
 
 	</div>

@@ -4,7 +4,7 @@
 
 ![Screenshot](screenshot.PNG)
 
-###Instagram clone made using NodeJS and Mongodb
+##Instagram clone made using NodeJS and Mongodb
 
 
 ## For run

@@ -10,7 +10,7 @@
 ## For run
 
 `'git clone https://github.com/dougsfelipe/Instagram-Clone.git'` <br />
-`'npn install'` <br />
+`'npm install'` <br />
 on api folder   `'nodemon server'` <br />
 on cliente_web folder   `'nodemon app'` <br />
 `'mongod.exe'` <br />
